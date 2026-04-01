@@ -1,384 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Puja Kirana Pasal - General Store | Gurbhakot 04, Sahare, Surkhet</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        header {
-            background: linear-gradient(135deg, #ff6b6b, #feca57);
-            color: white;
-            padding: 1rem 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        .logo {
-            font-size: 2rem;
-            font-weight: bold;
-        }
-        .contact-info {
-            text-align: right;
-        }
-        .contact-info p {
-            margin: 0.2rem 0;
-            font-size: 1.1rem;
-        }
-        nav {
-            background: #2c3e50;
-            padding: 1rem 0;
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        nav li {
-            margin: 0 1.5rem;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-        nav a:hover {
-            color: #feca57;
-        }
-        .hero {
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><rect fill="%23ff6b6b" width="1200" height="400"/><text x="600" y="200" font-family="Arial" font-size="48" fill="white" text-anchor="middle" dy=".3em">Puja Kirana Pasal</text></svg>') center/cover;
-            height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-        }
-        .hero p {
-            font-size: 1.5rem;
-        }
-        .section {
-            padding: 4rem 0;
-        }
-        .section h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: #2c3e50;
-        }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-        .card {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-        }
-        .card img {
-            width: 100px;
-            height: 100px;
-            margin-bottom: 1rem;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #ff6b6b, #feca57);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            margin: 0 auto 1rem;
-        }
-        .location-section {
-            background: #ecf0f1;
-        }
-        .location-map {
-            height: 400px;
-            background: #ddd;
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            color: #7f8c8d;
-            margin-top: 2rem;
-        }
-        .contact-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-        }
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            text-align: center;
-        }
-        .contact-item {
-            background: rgba(255,255,255,0.1);
-            padding: 2rem;
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-        }
-        .contact-item i {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            display: block;
-        }
-        footer {
-            background: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 2rem 0;
-        }
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            .header-content {
-                flex-direction: column;
-                text-align: center;
-            }
-            nav ul {
-                flex-direction: column;
-            }
-            nav li {
-                margin: 0.5rem 0;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Puja Kirana Pasal</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+  url('https://images.unsplash.com/photo-1606787366850-de6330128bfc');
+  background-size: cover;
+  color: white;
+}
+
+/* Header */
+header {
+  background: rgba(0,0,0,0.7);
+  padding: 15px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  color: #ffd700;
+}
+
+/* Section */
+.container {
+  padding: 30px;
+  text-align: center;
+}
+
+/* Card style */
+.card {
+  background: rgba(255,255,255,0.1);
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 15px;
+  width: 80%;
+  backdrop-filter: blur(5px);
+}
+
+/* Footer */
+footer {
+  background: rgba(0,0,0,0.8);
+  text-align: center;
+  padding: 10px;
+  margin-top: 30px;
+}
+</style>
+
 </head>
+
 <body>
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">🛒 Puja Kirana Pasal</div>
-                <div class="contact-info">
-                    <p>📞 9858041949</p>
-                    <p>✉️ nandaramoli26@gmail.com</p>
-                </div>
-            </div>
-        </div>
-    </header>
 
-    <nav>
-        <div class="container">
-            <ul>
-                <li><a href="#home">🏠 Home</a></li>
-                <li><a href="#products">🛍️ Products</a></li>
-                <li><a href="#beer">🍺 Beer & Cold Drinks</a></li>
-                <li><a href="#chauchau">🍜 Chauchau & Biscuit</a></li>
-                <li><a href="#location">📍 Location</a></li>
-                <li><a href="#contact">📞 Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+<header>
+  <h1>🌸 Puja Kirana Pasal 🌸</h1>
+  <p>Your trusted local store</p>
+</header>
 
-    <section id="home" class="hero">
-        <div>
-            <h1>पुजा किराना पसल</h1>
-            <p>सबै grocery सामान, Jasma Beer, Cold Drinks, Chauchau, Biscuit र अन्य सामान</p>
-        </div>
-    </section>
+<div class="container">
 
-    <section id="products" class="section">
-        <div class="container">
-            <h2>🔥 Popular Products</h2>
-            <div class="grid">
-                <div class="card">
-                    <div>🍺</div>
-                    <h3>Jasma Beer</h3>
-                    <p>Chilled Jasma Beer सधैं available!</p>
-                </div>
-                <div class="card">
-                    <div>🥤</div>
-                    <h3>Cold Drinks</h3>
-                    <p>Coca Cola, Sprite, Fanta, Dew सबै cold drinks</p>
-                </div>
-                <div class="card">
-                    <div>🍜</div>
-                    <h3>Chauchau</h3>
-                    <p>Wai Wai, Chao Chao, Maggi instant noodles</p>
-                </div>
-                <div class="card">
-                    <div>🍪</div>
-                    <h3>Biscuits</h3>
-                    <p>Parle G, Monaco, Good Day, Marie सबै types</p>
-                </div>
-                <div class="card">
-                    <div>🥛</div>
-                    <h3>Dairy Products</h3>
-                    <p>Doodh, Dahi, Paneer, Ghee</p>
-                </div>
-                <div class="card">
-                    <div>🧂</div>
-                    <h3>Masala & Spices</h3>
-                    <p>Sindoor, Haldi, Jeera, Dhaniya सबै masala</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  <div class="card">
+    <h2>🛒 About Us</h2>
+    <p>Welcome to Puja Kirana Pasal. We provide daily groceries and household items with quality and trust.</p>
+  </div>
 
-    <section id="beer" class="section">
-        <div class="container">
-            <h2>🍺 Beer & Cold Saman</h2>
-            <div class="grid">
-                <div class="card">
-                    <div>🍺</div>
-                    <h3>Jasma Beer</h3>
-                    <p>Always chilled and fresh!</p>
-                </div>
-                <div class="card">
-                    <div>🥤</div>
-                    <h3>Coca Cola</h3>
-                    <p>1.5L, 2L, Can मा available</p>
-                </div>
-                <div class="card">
-                    <div>🍹</div>
-                    <h3>Sprite & Fanta</h3>
-                    <p>Lemon lime र orange flavour</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  <div class="card">
+    <h2>📍 Address</h2>
+    <p>Gurbhakot-04, Sahare, Surkhet</p>
+  </div>
 
-    <section id="chauchau" class="section">
-        <div class="container">
-            <h2>🍜 Chauchau & Biscuit</h2>
-            <div class="grid">
-                <div class="card">
-                    <div>🍜</div>
-                    <h3>Wai Wai</h3>
-                    <p>Chicken, Veg, Special flavours</p>
-                </div>
-                <div class="card">
-                    <div>🍜</div>
-                    <h3>Chao Chao</h3>
-                    <p>Extra spicy र regular</p>
-                </div>
-                <div class="card">
-                    <div>🍪</div>
-                    <h3>Parle G</h3>
-                    <p>Tea time को perfect biscuit</p>
-                </div>
-                <div class="card">
-                    <div>🍪</div>
-                    <h3>Good Day</h3>
-                    <p>Butter, Chocolate flavours</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  <div class="card">
+    <h2>📞 Contact</h2>
+    <p>Phone: 9858041949</p>
+    <p>Email: nandaramoli26@gmail.com</p>
+  </div>
 
-    <section id="location" class="section location-section">
-        <div class="container">
-            <h2>📍 Location</h2>
-            <div class="location-map">
-                Gurbhakot 04, Sahare<br>
-                Surkhet, Nepal
-            </div>
-            <p style="text-align: center; margin-top: 2rem; font-size: 1.2rem;">
-                हाम्रो पसल Gurbhakot 04, Sahare, Surkhet मा अवस्थित छ। 
-                सजिलै आउन सकिने ठाउँमा छ।
-            </p>
-        </div>
-    </section>
+</div>
 
-    <section id="contact" class="section contact-section">
-        <div class="container">
-            <h2 style="color: white;">📞 Contact Us</h2>
-            <div class="contact-grid">
-                <div class="contact-item">
-                    <span>📱</span>
-                    <h3>Phone</h3>
-                    <p><strong>9858041949</strong></p>
-                </div>
-                <div class="contact-item">
-                    <span>✉️</span>
-                    <h3>Email</h3>
-                    <p><strong>nandaramoli26@gmail.com</strong></p>
-                </div>
-                <div class="contact-item">
-                    <span>👨‍💼</span>
-                    <h3>Producer</h3>
-                    <p><strong>Nandaramoli</strong></p>
-                </div>
-                <div class="contact-item">
-                    <span>🏪</span>
-                    <h3>Store</h3>
-                    <p><strong>Puja Kirana Pasal</strong></p>
-                </div>
-            </div>
-        </div>
-    </section>
+<footer>
+  <p>© 2026 Puja Kirana Pasal | All Rights Reserved</p>
+</footer>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Puja Kirana Pasal. Produced by Nandaramoli. Gurbhakot 04, Sahare, Surkhet.</p>
-            <p>सबै grocery सामान एकै ठाउँमा | Jasma Beer Cold | Chauchau | Biscuit</p>
-        </div>
-    </footer>
-
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Add active class to navigation on scroll
-        window.addEventListener('scroll', () => {
-            let current = '';
-            document.querySelectorAll('section').forEach(section => {
-                const sectionTop = section.offsetTop;
-                if (scrollY >= sectionTop - 200) {
-                    current = section.getAttribute('id');
-                }
-            });
-            
-            document.querySelectorAll('nav a').forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === `#${current}`) {
-                    link.classList.add('active');
-                }
-            });
-        });
-    </script>
 </body>
 </html>
